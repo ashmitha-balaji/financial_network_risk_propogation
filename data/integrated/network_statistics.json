@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-09T13:50:40.365815",
+  "timestamp": "2025-11-13T14:41:50.675652",
   "total_nodes": 4615,
-  "total_edges": 19347,
+  "total_edges": 19411,
   "layers": {
     "banking": {
       "nodes": 4476,
@@ -67,5 +67,53 @@
     "13f_holdings",
     "ownership_network",
     "economic_indicators"
-  ]
+  ],
+  "cross_layer_connections": {
+    "total_bridge_edges": 64,
+    "bridge_relationship_types": {
+      "PUBLICLY_TRADED_AS": 32,
+      "REPRESENTS_BANK": 32
+    },
+    "connected_entities": 32,
+    "connected_entity_list": [
+      "BAC",
+      "FITB",
+      "KEY",
+      "VRTS",
+      "WTFC",
+      "MS",
+      "BK",
+      "TFC",
+      "BLK",
+      "BEN",
+      "IVZ",
+      "APAM",
+      "CFG",
+      "SEIC",
+      "RF",
+      "C",
+      "AMG",
+      "CMA",
+      "FHN",
+      "USB",
+      "WFC",
+      "TROW",
+      "PNC",
+      "MTB",
+      "GS",
+      "HBAN",
+      "UMBF",
+      "JPM",
+      "ZION",
+      "SCHW",
+      "COF",
+      "STT"
+    ]
+  },
+  "layer_connectivity_matrix": {
+    "banking_to_market": 32,
+    "market_to_banking": 32,
+    "market_to_ownership": 1881,
+    "banking_to_ownership": 0
+  }
 }

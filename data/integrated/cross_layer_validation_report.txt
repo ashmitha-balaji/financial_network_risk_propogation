@@ -1,0 +1,79 @@
+================================================================================
+CROSS-LAYER CONNECTION VALIDATION REPORT
+================================================================================
+Generated: 2025-11-13 14:41:50
+
+NODE COUNTS BY LAYER
+----------------------------------------
+  Banking: 4476 nodes
+  Market: 136 nodes
+  Ownership: 3 nodes
+
+ENTITY MATCHING RESULTS
+----------------------------------------
+  Matched (Bank + Stock): 32 entities
+  Banks only (not public): 68 entities
+  Stocks only (not banks): 104 entities
+  Total entities: 204 entities
+
+MATCHED ENTITIES (Bank ↔ Stock)
+----------------------------------------
+  BAC: BAC Financial Corp
+  FITB: FITB Financial Corp
+  KEY: KEY Financial Corp
+  VRTS: VRTS Financial Corp
+  WTFC: WTFC Financial Corp
+  MS: MS Financial Corp
+  BK: BK Financial Corp
+  TFC: TFC Financial Corp
+  BLK: BLK Financial Corp
+  BEN: BEN Financial Corp
+  IVZ: IVZ Financial Corp
+  APAM: APAM Financial Corp
+  CFG: CFG Financial Corp
+  SEIC: SEIC Financial Corp
+  RF: RF Financial Corp
+  C: C Financial Corp
+  AMG: AMG Financial Corp
+  CMA: CMA Financial Corp
+  FHN: FHN Financial Corp
+  USB: USB Financial Corp
+  WFC: WFC Financial Corp
+  TROW: TROW Financial Corp
+  PNC: PNC Financial Corp
+  MTB: MTB Financial Corp
+  GS: GS Financial Corp
+  HBAN: HBAN Financial Corp
+  UMBF: UMBF Financial Corp
+  JPM: JPM Financial Corp
+  ZION: ZION Financial Corp
+  SCHW: SCHW Financial Corp
+  COF: COF Financial Corp
+  STT: STT Financial Corp
+
+BRIDGE EDGES CREATED
+----------------------------------------
+  Total bridge edges: 64
+    PUBLICLY_TRADED_AS: 32 edges
+    REPRESENTS_BANK: 32 edges
+
+RISK PROPAGATION PATHS
+----------------------------------------
+  Banking → Market:
+    Via PUBLICLY_TRADED_AS: 32 paths
+  Market → Ownership:
+    Via equity_ownership: 1881 paths
+  Full chain (Banking → Market → Ownership):
+    Possible paths: 60192 combinations
+
+EXAMPLE CONTAGION SCENARIO
+----------------------------------------
+  Trigger: BANK_BAC experiences stress event
+  Step 1: Propagates via PUBLICLY_TRADED_AS → STOCK_BAC
+  Step 2: Stock price drops, affecting institutional investors
+  Step 3: Investors (INST_*) holding BAC face losses
+  Step 4: Forced selling cascades to correlated stocks
+
+================================================================================
+VALIDATION COMPLETE
+================================================================================

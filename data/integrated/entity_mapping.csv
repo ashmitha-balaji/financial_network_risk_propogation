@@ -1,0 +1,205 @@
+ticker,bank_node_id,stock_node_id,entity_name,entity_type,matched,total_assets,market_cap
+BAC,BANK_BAC,STOCK_BAC,BAC Financial Corp,publicly_traded_bank,True,2715425942094.948,388492787712.0
+FITB,BANK_FITB,STOCK_FITB,FITB Financial Corp,publicly_traded_bank,True,836702778300.1835,28337573888.0
+KEY,BANK_KEY,STOCK_KEY,KEY Financial Corp,publicly_traded_bank,True,702653726631.8947,19759984640.0
+VRTS,BANK_VRTS,STOCK_VRTS,VRTS Financial Corp,publicly_traded_bank,True,2786414026200.2397,1101018112.0
+WTFC,BANK_WTFC,STOCK_WTFC,WTFC Financial Corp,publicly_traded_bank,True,837921606298.4657,8747772928.0
+MS,BANK_MS,STOCK_MS,MS Financial Corp,publicly_traded_bank,True,810864420396.8446,258040266752.0
+BK,BANK_BK,STOCK_BK,BK Financial Corp,publicly_traded_bank,True,273577041750.034,76457353216.0
+TFC,BANK_TFC,STOCK_TFC,TFC Financial Corp,publicly_traded_bank,True,344691206000.1008,57233481728.0
+BLK,BANK_BLK,STOCK_BLK,BLK Financial Corp,publicly_traded_bank,True,1048534269857.7308,167904313344.0
+BEN,BANK_BEN,STOCK_BEN,BEN Financial Corp,publicly_traded_bank,True,1400498668185.333,11581830144.0
+IVZ,BANK_IVZ,STOCK_IVZ,IVZ Financial Corp,publicly_traded_bank,True,933579975805.5542,10401821696.0
+APAM,BANK_APAM,STOCK_APAM,APAM Financial Corp,publicly_traded_bank,True,2700203166572.4585,3164432896.0
+CFG,BANK_CFG,STOCK_CFG,CFG Financial Corp,publicly_traded_bank,True,1514801848620.212,22204436480.0
+SEIC,BANK_SEIC,STOCK_SEIC,SEIC Financial Corp,publicly_traded_bank,True,1299425791820.2424,10152675328.0
+RF,BANK_RF,STOCK_RF,RF Financial Corp,publicly_traded_bank,True,1786936345346.8347,21790380032.0
+C,BANK_C,STOCK_C,C Financial Corp,publicly_traded_bank,True,1597308405577.5957,180340146176.0
+AMG,BANK_AMG,STOCK_AMG,AMG Financial Corp,publicly_traded_bank,True,1664309255697.3994,7292701184.0
+CMA,BANK_CMA,STOCK_CMA,CMA Financial Corp,publicly_traded_bank,True,660512919074.3445,10077617152.0
+FHN,BANK_FHN,STOCK_FHN,FHN Financial Corp,publicly_traded_bank,True,1757711379270.2913,10601245696.0
+USB,BANK_USB,STOCK_USB,USB Financial Corp,publicly_traded_bank,True,2906306694506.7246,73555820544.0
+WFC,BANK_WFC,STOCK_WFC,WFC Financial Corp,publicly_traded_bank,True,74852056011.42174,270086832128.0
+TROW,BANK_TROW,STOCK_TROW,TROW Financial Corp,publicly_traded_bank,True,1519903985163.6914,22404210688.0
+PNC,BANK_PNC,STOCK_PNC,PNC Financial Corp,publicly_traded_bank,True,603952930134.3759,72235589632.0
+MTB,BANK_MTB,STOCK_MTB,MTB Financial Corp,publicly_traded_bank,True,2285764689076.979,28564969472.0
+GS,BANK_GS,STOCK_GS,GS Financial Corp,publicly_traded_bank,True,663968817913.043,235845795840.0
+HBAN,BANK_HBAN,STOCK_HBAN,HBAN Financial Corp,publicly_traded_bank,True,1140846444729.372,24559067136.0
+UMBF,BANK_UMBF,STOCK_UMBF,UMBF Financial Corp,publicly_traded_bank,True,2456446213903.636,8278297600.0
+JPM,BANK_JPM,STOCK_JPM,JPM Financial Corp,publicly_traded_bank,True,2783277192147.1216,855361978368.0
+ZION,BANK_ZION,STOCK_ZION,ZION Financial Corp,publicly_traded_bank,True,16423075837.539978,7712768000.0
+SCHW,BANK_SCHW,STOCK_SCHW,SCHW Financial Corp,publicly_traded_bank,True,1749265782368.8716,172881477632.0
+COF,BANK_COF,STOCK_COF,COF Financial Corp,publicly_traded_bank,True,380674949697.6492,138475503616.0
+STT,BANK_STT,STOCK_STT,STT Financial Corp,publicly_traded_bank,True,137446164670.18857,33045454848.0
+WAFD,BANK_WAFD,,WAFD Financial Corp,bank_not_public,False,2600559145027.3257,0.0
+CU_004,BANK_CU_004,,CU_004 Financial Corp,bank_not_public,False,47626967764.30842,0.0
+FNB,BANK_FNB,,FNB Financial Corp,bank_not_public,False,616050931962.491,0.0
+PNFP,BANK_PNFP,,PNFP Financial Corp,bank_not_public,False,898722652374.3143,0.0
+CATY,BANK_CATY,,CATY Financial Corp,bank_not_public,False,743166919330.8118,0.0
+CU_024,BANK_CU_024,,CU_024 Financial Corp,bank_not_public,False,1292543435150.3047,0.0
+CU_048,BANK_CU_048,,CU_048 Financial Corp,bank_not_public,False,451765700773.9318,0.0
+CU_007,BANK_CU_007,,CU_007 Financial Corp,bank_not_public,False,1616779446879.2854,0.0
+SIVB,BANK_SIVB,,SIVB Financial Corp,bank_not_public,False,1347544317026.2944,0.0
+CU_033,BANK_CU_033,,CU_033 Financial Corp,bank_not_public,False,475336455978.4166,0.0
+CU_042,BANK_CU_042,,CU_042 Financial Corp,bank_not_public,False,231776265659.0305,0.0
+TCBI,BANK_TCBI,,TCBI Financial Corp,bank_not_public,False,2318943418954.6714,0.0
+CU_006,BANK_CU_006,,CU_006 Financial Corp,bank_not_public,False,2851042939860.778,0.0
+CU_009,BANK_CU_009,,CU_009 Financial Corp,bank_not_public,False,1860286988679.9568,0.0
+CU_011,BANK_CU_011,,CU_011 Financial Corp,bank_not_public,False,1828405608917.9111,0.0
+WAL,BANK_WAL,,WAL Financial Corp,bank_not_public,False,659526153225.0646,0.0
+CU_026,BANK_CU_026,,CU_026 Financial Corp,bank_not_public,False,1015501524797.0529,0.0
+NYCB,BANK_NYCB,,NYCB Financial Corp,bank_not_public,False,1546692490212.9338,0.0
+CU_017,BANK_CU_017,,CU_017 Financial Corp,bank_not_public,False,1634095090247.4917,0.0
+CU_038,BANK_CU_038,,CU_038 Financial Corp,bank_not_public,False,1551376813141.355,0.0
+CU_010,BANK_CU_010,,CU_010 Financial Corp,bank_not_public,False,1941526836538.2715,0.0
+CU_019,BANK_CU_019,,CU_019 Financial Corp,bank_not_public,False,804022108958.5833,0.0
+CU_037,BANK_CU_037,,CU_037 Financial Corp,bank_not_public,False,332115052035.07263,0.0
+CVBF,BANK_CVBF,,CVBF Financial Corp,bank_not_public,False,364443123844.6489,0.0
+CU_018,BANK_CU_018,,CU_018 Financial Corp,bank_not_public,False,2220793923706.083,0.0
+SBNY,BANK_SBNY,,SBNY Financial Corp,bank_not_public,False,707435365630.0099,0.0
+CU_029,BANK_CU_029,,CU_029 Financial Corp,bank_not_public,False,661772547300.5967,0.0
+CU_016,BANK_CU_016,,CU_016 Financial Corp,bank_not_public,False,1820560195218.2192,0.0
+CU_050,BANK_CU_050,,CU_050 Financial Corp,bank_not_public,False,2319200428300.5386,0.0
+OZK,BANK_OZK,,OZK Financial Corp,bank_not_public,False,1746994956315.7607,0.0
+CU_013,BANK_CU_013,,CU_013 Financial Corp,bank_not_public,False,1579748517203.1233,0.0
+CU_039,BANK_CU_039,,CU_039 Financial Corp,bank_not_public,False,1020656582823.948,0.0
+CU_020,BANK_CU_020,,CU_020 Financial Corp,bank_not_public,False,1543102531952.2146,0.0
+CU_030,BANK_CU_030,,CU_030 Financial Corp,bank_not_public,False,161960632558.3583,0.0
+CU_012,BANK_CU_012,,CU_012 Financial Corp,bank_not_public,False,116860526862.98389,0.0
+IBOC,BANK_IBOC,,IBOC Financial Corp,bank_not_public,False,2823102069749.8296,0.0
+SNV,BANK_SNV,,SNV Financial Corp,bank_not_public,False,552339959183.9897,0.0
+CU_040,BANK_CU_040,,CU_040 Financial Corp,bank_not_public,False,1077640084396.0404,0.0
+CU_003,BANK_CU_003,,CU_003 Financial Corp,bank_not_public,False,2973962531725.0054,0.0
+CU_047,BANK_CU_047,,CU_047 Financial Corp,bank_not_public,False,162776600731.91855,0.0
+CU_046,BANK_CU_046,,CU_046 Financial Corp,bank_not_public,False,2013851631241.4849,0.0
+CU_028,BANK_CU_028,,CU_028 Financial Corp,bank_not_public,False,688466635834.4133,0.0
+CU_027,BANK_CU_027,,CU_027 Financial Corp,bank_not_public,False,1063959717117.9728,0.0
+CU_005,BANK_CU_005,,CU_005 Financial Corp,bank_not_public,False,1679249106630.573,0.0
+CU_025,BANK_CU_025,,CU_025 Financial Corp,bank_not_public,False,1185399552989.5574,0.0
+CU_044,BANK_CU_044,,CU_044 Financial Corp,bank_not_public,False,470359843374.16174,0.0
+CASH,BANK_CASH,,CASH Financial Corp,bank_not_public,False,2421672986559.0645,0.0
+CU_043,BANK_CU_043,,CU_043 Financial Corp,bank_not_public,False,585175004280.695,0.0
+CU_034,BANK_CU_034,,CU_034 Financial Corp,bank_not_public,False,2965317914578.6147,0.0
+CU_045,BANK_CU_045,,CU_045 Financial Corp,bank_not_public,False,2598946716485.411,0.0
+CU_035,BANK_CU_035,,CU_035 Financial Corp,bank_not_public,False,446595715641.467,0.0
+CU_022,BANK_CU_022,,CU_022 Financial Corp,bank_not_public,False,2116629569334.5935,0.0
+CU_014,BANK_CU_014,,CU_014 Financial Corp,bank_not_public,False,2308124554005.75,0.0
+CU_031,BANK_CU_031,,CU_031 Financial Corp,bank_not_public,False,2210584905603.1104,0.0
+CU_049,BANK_CU_049,,CU_049 Financial Corp,bank_not_public,False,2425234280862.395,0.0
+UCBI,BANK_UCBI,,UCBI Financial Corp,bank_not_public,False,661636434263.1909,0.0
+CU_021,BANK_CU_021,,CU_021 Financial Corp,bank_not_public,False,1148836183948.7349,0.0
+CU_008,BANK_CU_008,,CU_008 Financial Corp,bank_not_public,False,2794158975397.314,0.0
+CU_036,BANK_CU_036,,CU_036 Financial Corp,bank_not_public,False,1808244366645.03,0.0
+CU_015,BANK_CU_015,,CU_015 Financial Corp,bank_not_public,False,737050809392.152,0.0
+CU_002,BANK_CU_002,,CU_002 Financial Corp,bank_not_public,False,455615690523.51746,0.0
+CU_001,BANK_CU_001,,CU_001 Financial Corp,bank_not_public,False,2138533579537.2295,0.0
+FCNCA,BANK_FCNCA,,FCNCA Financial Corp,bank_not_public,False,75995599384.89594,0.0
+CU_023,BANK_CU_023,,CU_023 Financial Corp,bank_not_public,False,1171709058982.2532,0.0
+BANC,BANK_BANC,,BANC Financial Corp,bank_not_public,False,1796055176707.5542,0.0
+CU_041,BANK_CU_041,,CU_041 Financial Corp,bank_not_public,False,1034399061535.406,0.0
+EWBC,BANK_EWBC,,EWBC Financial Corp,bank_not_public,False,1340812754184.1013,0.0
+CU_032,BANK_CU_032,,CU_032 Financial Corp,bank_not_public,False,1266417644906.726,0.0
+JKHY,,STOCK_JKHY,"Jack Henry & Associates, Inc.",stock_not_bank,False,0.0,11684563968.0
+MAA,,STOCK_MAA,"Mid-America Apartment Communities, Inc.",stock_not_bank,False,0.0,15561057280.0
+PSA,,STOCK_PSA,Public Storage,stock_not_bank,False,0.0,48787488768.0
+PFSI,,STOCK_PFSI,"PennyMac Financial Services, Inc.",stock_not_bank,False,0.0,6547649536.0
+EXR,,STOCK_EXR,Extra Space Storage Inc.,stock_not_bank,False,0.0,29512077312.0
+AON,,STOCK_AON,Aon plc,stock_not_bank,False,0.0,74436378624.0
+STATE,,STOCK_STATE,STATE,stock_not_bank,False,0.0,0.0
+VIRT,,STOCK_VIRT,"Virtu Financial, Inc.",stock_not_bank,False,0.0,7593471488.0
+FRT,,STOCK_FRT,Federal Realty Investment Trust,stock_not_bank,False,0.0,8449037824.0
+EVTC,,STOCK_EVTC,"EVERTEC, Inc.",stock_not_bank,False,0.0,1746758784.0
+GBCI,,STOCK_GBCI,"Glacier Bancorp, Inc.",stock_not_bank,False,0.0,5535501824.0
+AGNC,,STOCK_AGNC,AGNC Investment Corp.,stock_not_bank,False,0.0,11091966976.0
+CPT,,STOCK_CPT,Camden Property Trust,stock_not_bank,False,0.0,10875470848.0
+HOOD,,STOCK_HOOD,"Robinhood Markets, Inc.",stock_not_bank,False,0.0,117218263040.0
+SOFI,,STOCK_SOFI,"SoFi Technologies, Inc.",stock_not_bank,False,0.0,34018525184.0
+BXP,,STOCK_BXP,"BXP, Inc.",stock_not_bank,False,0.0,12795293696.0
+ALL,,STOCK_ALL,The Allstate Corporation,stock_not_bank,False,0.0,52935589888.0
+MC,,STOCK_MC,Moelis & Company,stock_not_bank,False,0.0,4729257984.0
+PMT,,STOCK_PMT,PennyMac Mortgage Investment Trust,stock_not_bank,False,0.0,1058121920.0
+SUI,,STOCK_SUI,"Sun Communities, Inc.",stock_not_bank,False,0.0,16289880064.0
+AXP,,STOCK_AXP,American Express Company,stock_not_bank,False,0.0,253869391872.0
+PYPL,,STOCK_PYPL,"PayPal Holdings, Inc.",stock_not_bank,False,0.0,61958873088.0
+CCI,,STOCK_CCI,Crown Castle Inc.,stock_not_bank,False,0.0,38992789504.0
+DX,,STOCK_DX,"Dynex Capital, Inc.",stock_not_bank,False,0.0,1999712128.0
+TRV,,STOCK_TRV,"The Travelers Companies, Inc.",stock_not_bank,False,0.0,62415376384.0
+INVH,,STOCK_INVH,Invitation Homes Inc.,stock_not_bank,False,0.0,17170707456.0
+MOH,,STOCK_MOH,"Molina Healthcare, Inc.",stock_not_bank,False,0.0,7815883776.0
+PGR,,STOCK_PGR,The Progressive Corporation,stock_not_bank,False,0.0,127406530560.0
+ONB,,STOCK_ONB,Old National Bancorp,stock_not_bank,False,0.0,8202324992.0
+DLR,,STOCK_DLR,"Digital Realty Trust, Inc.",stock_not_bank,False,0.0,59411304448.0
+UWMC,,STOCK_UWMC,UWM Holdings Corporation,stock_not_bank,False,0.0,8506500096.0
+VCTR,,STOCK_VCTR,"Victory Capital Holdings, Inc.",stock_not_bank,False,0.0,4096523264.0
+LPRO,,STOCK_LPRO,Open Lending Corporation,stock_not_bank,False,0.0,171374688.0
+PAYO,,STOCK_PAYO,Payoneer Global Inc.,stock_not_bank,False,0.0,1914084480.0
+CIM,,STOCK_CIM,Chimera Investment Corporation,stock_not_bank,False,0.0,1014447168.0
+VICI,,STOCK_VICI,VICI Properties Inc.,stock_not_bank,False,0.0,32427737088.0
+HUM,,STOCK_HUM,Humana Inc.,stock_not_bank,False,0.0,30313623552.0
+WELL,,STOCK_WELL,Welltower Inc.,stock_not_bank,False,0.0,130573918208.0
+DFS,,STOCK_DFS,DFS,stock_not_bank,False,0.0,0.0
+COIN,,STOCK_COIN,"Coinbase Global, Inc.",stock_not_bank,False,0.0,83357687808.0
+UNH,,STOCK_UNH,UnitedHealth Group Incorporated,stock_not_bank,False,0.0,293681922048.0
+HLNE,,STOCK_HLNE,Hamilton Lane Incorporated,stock_not_bank,False,0.0,7312521216.0
+CB,,STOCK_CB,Chubb Limited,stock_not_bank,False,0.0,113165541376.0
+ESS,,STOCK_ESS,"Essex Property Trust, Inc.",stock_not_bank,False,0.0,17986811904.0
+MA,,STOCK_MA,Mastercard Incorporated,stock_not_bank,False,0.0,495666724864.0
+SYF,,STOCK_SYF,Synchrony Financial,stock_not_bank,False,0.0,26360924160.0
+BILL,,STOCK_BILL,"BILL Holdings, Inc.",stock_not_bank,False,0.0,4576271872.0
+VTR,,STOCK_VTR,"Ventas, Inc.",stock_not_bank,False,0.0,35732578304.0
+UPST,,STOCK_UPST,"Upstart Holdings, Inc.",stock_not_bank,False,0.0,3755257856.0
+SPG,,STOCK_SPG,"Simon Property Group, Inc.",stock_not_bank,False,0.0,69250834432.0
+NU,,STOCK_NU,Nu Holdings Ltd.,stock_not_bank,False,0.0,76689465344.0
+TWO,,STOCK_TWO,Two Harbors Investment Corp.,stock_not_bank,False,0.0,1008228352.0
+AVB,,STOCK_AVB,"AvalonBay Communities, Inc.",stock_not_bank,False,0.0,25116110848.0
+EVR,,STOCK_EVR,Evercore Inc.,stock_not_bank,False,0.0,11856390144.0
+V,,STOCK_V,Visa Inc.,stock_not_bank,False,0.0,648484028416.0
+NRZ,,STOCK_NRZ,NRZ,stock_not_bank,False,0.0,0.0
+AMT,,STOCK_AMT,American Tower Corporation,stock_not_bank,False,0.0,83306692608.0
+L,,STOCK_L,Loews Corporation,stock_not_bank,False,0.0,21201205248.0
+SQ,,STOCK_SQ,SQ,stock_not_bank,False,0.0,0.0
+MET,,STOCK_MET,"MetLife, Inc.",stock_not_bank,False,0.0,50312306688.0
+STNE,,STOCK_STNE,StoneCo Ltd.,stock_not_bank,False,0.0,4415230464.0
+QFIN,,STOCK_QFIN,"Qfin Holdings, Inc.",stock_not_bank,False,0.0,2969264896.0
+CI,,STOCK_CI,The Cigna Group,stock_not_bank,False,0.0,70676144128.0
+MMC,,STOCK_MMC,"Marsh & McLennan Companies, Inc.",stock_not_bank,False,0.0,88208244736.0
+REG,,STOCK_REG,Regency Centers Corporation,stock_not_bank,False,0.0,13028791296.0
+NYMT,,STOCK_NYMT,NYMT,stock_not_bank,False,0.0,0.0
+AIG,,STOCK_AIG,"American International Group, Inc.",stock_not_bank,False,0.0,41509584896.0
+PAGS,,STOCK_PAGS,PagSeguro Digital Ltd.,stock_not_bank,False,0.0,2702730752.0
+FIS,,STOCK_FIS,"Fidelity National Information Services, Inc.",stock_not_bank,False,0.0,33546371072.0
+ORC,,STOCK_ORC,"Orchid Island Capital, Inc.",stock_not_bank,False,0.0,1122669952.0
+WRB,,STOCK_WRB,W. R. Berkley Corporation,stock_not_bank,False,0.0,28490188800.0
+UDR,,STOCK_UDR,"UDR, Inc.",stock_not_bank,False,0.0,12977577984.0
+PJT,,STOCK_PJT,PJT Partners Inc.,stock_not_bank,False,0.0,6625352704.0
+PLD,,STOCK_PLD,"Prologis, Inc.",stock_not_bank,False,0.0,116665696256.0
+RE,,STOCK_RE,RE,stock_not_bank,False,0.0,0.0
+LDI,,STOCK_LDI,"loanDepot, Inc.",stock_not_bank,False,0.0,910046336.0
+AFRM,,STOCK_AFRM,"Affirm Holdings, Inc.",stock_not_bank,False,0.0,24300021760.0
+PRU,,STOCK_PRU,"Prudential Financial, Inc.",stock_not_bank,False,0.0,37193162752.0
+AJG,,STOCK_AJG,Arthur J. Gallagher & Co.,stock_not_bank,False,0.0,64203812864.0
+RKT,,STOCK_RKT,"Rocket Companies, Inc.",stock_not_bank,False,0.0,45495939072.0
+FOUR,,STOCK_FOUR,"Shift4 Payments, Inc.",stock_not_bank,False,0.0,5862162432.0
+IVR,,STOCK_IVR,Invesco Mortgage Capital Inc.,stock_not_bank,False,0.0,551247040.0
+AFL,,STOCK_AFL,Aflac Incorporated,stock_not_bank,False,0.0,59796156416.0
+BRK-B,,STOCK_BRK-B,Berkshire Hathaway Inc.,stock_not_bank,False,0.0,1076732231680.0
+ANTM,,STOCK_ANTM,ANTM,stock_not_bank,False,0.0,0.0
+NAVI,,STOCK_NAVI,Navient Corporation,stock_not_bank,False,0.0,1142778624.0
+LC,,STOCK_LC,LendingClub Corporation,stock_not_bank,False,0.0,2092721152.0
+HIG,,STOCK_HIG,"The Hartford Insurance Group, Inc.",stock_not_bank,False,0.0,36060135424.0
+BNPL,,STOCK_BNPL,BNPL,stock_not_bank,False,0.0,0.0
+EQIX,,STOCK_EQIX,"Equinix, Inc.",stock_not_bank,False,0.0,80978968576.0
+FISV,,STOCK_FISV,FISV,stock_not_bank,False,0.0,0.0
+CNC,,STOCK_CNC,Centene Corporation,stock_not_bank,False,0.0,18461417472.0
+EARN,,STOCK_EARN,Ellington Credit Company,stock_not_bank,False,0.0,197936960.0
+GPN,,STOCK_GPN,Global Payments Inc.,stock_not_bank,False,0.0,17999624192.0
+CPAY,,STOCK_CPAY,"Corpay, Inc.",stock_not_bank,False,0.0,19526995968.0
+JFIN,,STOCK_JFIN,Jiayin Group Inc.,stock_not_bank,False,0.0,481393312.0
+EQR,,STOCK_EQR,Equity Residential,stock_not_bank,False,0.0,23414593536.0
+O,,STOCK_O,Realty Income Corporation,stock_not_bank,False,0.0,52315041792.0
+KIM,,STOCK_KIM,Kimco Realty Corporation,stock_not_bank,False,0.0,13909566464.0
+MFA,,STOCK_MFA,"MFA Financial, Inc.",stock_not_bank,False,0.0,941222464.0
+CVS,,STOCK_CVS,CVS Health Corporation,stock_not_bank,False,0.0,100272463872.0
+MITT,,STOCK_MITT,"AG Mortgage Investment Trust, Inc.",stock_not_bank,False,0.0,247830288.0
+MTTR,,STOCK_MTTR,MTTR,stock_not_bank,False,0.0,0.0
+RGA,,STOCK_RGA,"Reinsurance Group of America, Incorporated",stock_not_bank,False,0.0,12514542592.0
