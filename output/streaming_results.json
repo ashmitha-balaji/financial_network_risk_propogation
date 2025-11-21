@@ -1,0 +1,60 @@
+{
+  "bloom_filter": {
+    "size": 10000,
+    "hash_count": 5,
+    "items_added": 4601,
+    "bits_set": 9994,
+    "fill_rate": 0.9994,
+    "estimated_fpr": 0.589805589159197
+  },
+  "dgim": {
+    "window_size": 1000,
+    "current_time": 19411,
+    "num_buckets": 0,
+    "estimated_count": 0,
+    "buckets": []
+  },
+  "flajolet_martin_src": {
+    "num_hash_functions": 10,
+    "max_trailing_zeros": [
+      8,
+      7,
+      9,
+      8,
+      7,
+      11,
+      13,
+      8,
+      10,
+      7
+    ],
+    "estimated_cardinality": 330
+  },
+  "flajolet_martin_dst": {
+    "num_hash_functions": 10,
+    "max_trailing_zeros": [
+      11,
+      9,
+      10,
+      10,
+      9,
+      11,
+      13,
+      9,
+      14,
+      16
+    ],
+    "estimated_cardinality": 2647
+  },
+  "reservoir": {
+    "reservoir_size": 100,
+    "items_processed": 19411,
+    "current_sample_size": 100,
+    "sampling_probability": 0.005151718097985678
+  },
+  "summary": {
+    "edges_processed": 19411,
+    "duplicates_detected": 14810,
+    "high_risk_edges": 4741
+  }
+}

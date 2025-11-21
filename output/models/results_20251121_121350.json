@@ -1,0 +1,97 @@
+{
+  "timestamp": "20251121_121350",
+  "model_type": "RandomForestClassifier",
+  "model_params": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": 12,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 8,
+    "min_samples_split": 15,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 150,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "n_samples": 4615,
+  "n_features": 11,
+  "features": [
+    "pagerank_score",
+    "in_degree",
+    "out_degree",
+    "total_degree",
+    "betweenness_centrality",
+    "clustering_coefficient",
+    "incoming_exposure",
+    "outgoing_exposure",
+    "total_exposure",
+    "total_assets",
+    "equity"
+  ],
+  "metrics": {
+    "f1_score": 0.3532934131736527,
+    "roc_auc": 0.606410463155207,
+    "confusion_matrix": [
+      [
+        1110,
+        9
+      ],
+      [
+        207,
+        59
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8428246013667426,
+        "recall": 0.9919571045576407,
+        "f1-score": 0.9113300492610837,
+        "support": 1119.0
+      },
+      "1": {
+        "precision": 0.8676470588235294,
+        "recall": 0.22180451127819548,
+        "f1-score": 0.3532934131736527,
+        "support": 266.0
+      },
+      "accuracy": 0.844043321299639,
+      "macro avg": {
+        "precision": 0.855235830095136,
+        "recall": 0.6068808079179181,
+        "f1-score": 0.6323117312173683,
+        "support": 1385.0
+      },
+      "weighted avg": {
+        "precision": 0.847591946986602,
+        "recall": 0.844043321299639,
+        "f1-score": 0.8041547819692018,
+        "support": 1385.0
+      }
+    },
+    "feature_importance": {
+      "total_degree": 0.25323703606924697,
+      "out_degree": 0.20110037770910583,
+      "pagerank_score": 0.19250859909395765,
+      "clustering_coefficient": 0.1382815758883415,
+      "in_degree": 0.12993979711781287,
+      "betweenness_centrality": 0.03326854960434835,
+      "outgoing_exposure": 0.030667554552603688,
+      "incoming_exposure": 0.00838955076962603,
+      "total_exposure": 0.006565967694971305,
+      "equity": 0.0037057820983834857,
+      "total_assets": 0.002335209401602476
+    }
+  },
+  "hypothesis_met": false,
+  "training_samples": 3230,
+  "testing_samples": 1385
+}
