@@ -1,0 +1,57 @@
+{
+  "global_feature_importance": {
+    "pagerank_score": 0.06859880600835426,
+    "in_degree": 0.06028927155964765,
+    "out_degree": 0.1199050604901958,
+    "total_degree": 0.14360968535656296,
+    "betweenness_centrality": 0.014224297517459466,
+    "clustering_coefficient": 0.06507286269985194,
+    "incoming_exposure": 0.0016433178641737081,
+    "outgoing_exposure": 0.005331719087389157,
+    "total_exposure": 0.00866515562543783,
+    "total_assets": 0.0015409910770226068,
+    "equity": 2.945060940306442e-19
+  },
+  "top_features": [
+    [
+      "total_degree",
+      0.14360968535656296
+    ],
+    [
+      "out_degree",
+      0.1199050604901958
+    ],
+    [
+      "pagerank_score",
+      0.06859880600835426
+    ],
+    [
+      "clustering_coefficient",
+      0.06507286269985194
+    ],
+    [
+      "in_degree",
+      0.06028927155964765
+    ],
+    [
+      "betweenness_centrality",
+      0.014224297517459466
+    ],
+    [
+      "total_exposure",
+      0.00866515562543783
+    ],
+    [
+      "outgoing_exposure",
+      0.005331719087389157
+    ],
+    [
+      "incoming_exposure",
+      0.0016433178641737081
+    ],
+    [
+      "total_assets",
+      0.0015409910770226068
+    ]
+  ]
+}
