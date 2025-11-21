@@ -1,20 +1,31 @@
+#!/usr/bin/env python3
 """
-PART 4: FRED Economic Data Collection & Dataset Integration
-Estimated Time: 8–10 hours
-Target: 10 000 + rows of economic indicators + complete integration
+Combined FRED collector + streaming server (file-drop mode).
+Fetches economic indicators, computes stress index, and streams JSON rows.
 """
 
-import requests
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
-import time
-from pathlib import Path
-import logging
+import argparse
 import json
+import logging
+import os
+import time
+from datetime import datetime, timedelta
+from pathlib import Path
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+import pandas as pd
+import requests
+from dotenv import load_dotenv
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger("FREDStream")
+
+OUTPUT_DIR = Path("/tmp/stream_fred")
+OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
+
+# Load .env at project root if present
+ROOT_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
+if ROOT_ENV_PATH.exists():
+    load_dotenv(ROOT_ENV_PATH)
 
 
 class FREDDataCollector:
@@ -28,20 +39,15 @@ class FREDDataCollector:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.base_url = "https://api.stlouisfed.org/fred"
 
-        # ---- Key FRED series for macro stress analysis ----
+        # Key FRED series for macro stress analysis
         self.series_ids = {
-            # Interest & yield
             "FEDFUNDS": "Federal Funds Rate",
             "DGS10": "10-Year Treasury Rate",
             "DGS2": "2-Year Treasury Rate",
             "T10Y2Y": "10-Year minus 2-Year Spread",
-
-            # Credit & liquidity
             "BAMLH0A0HYM2": "High Yield Credit Spread",
             "TEDRATE": "TED Spread",
             "VIXCLS": "CBOE Volatility Index",
-
-            # Labor & macro
             "UNRATE": "Unemployment Rate",
             "CPIAUCSL": "Consumer Price Index",
             "GDPC1": "Real GDP",
@@ -49,7 +55,6 @@ class FREDDataCollector:
             "INDPRO": "Industrial Production Index",
         }
 
-    # ------------------------------------------------------
     def fetch_series(self, series_id, start_date="2020-01-01"):
         """Download one time series from FRED API"""
         url = (
@@ -72,7 +77,6 @@ class FREDDataCollector:
             logger.error(f"Failed {series_id}: {e}")
             return pd.DataFrame(columns=["date", "value", "series_id"])
 
-    # ------------------------------------------------------
     def collect_all(self, start_date="2020-01-01"):
         """Loop through all indicators and concatenate"""
         all_df = []
@@ -86,7 +90,6 @@ class FREDDataCollector:
         logger.info(f"✅ Collected {len(final):,} rows from {len(self.series_ids)} series")
         return final
 
-    # ------------------------------------------------------
     def compute_stress_index(self, df):
         """Derive composite financial stress score"""
         df_pivot = df.pivot(index="date", columns="series_id", values="value").fillna(method="ffill")
@@ -99,7 +102,6 @@ class FREDDataCollector:
         logger.info(f"Stress index computed for {len(df_pivot):,} dates")
         return df_pivot.reset_index()
 
-    # ------------------------------------------------------
     def save_outputs(self, econ_df, stress_df):
         """Save to CSV and JSON"""
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -112,18 +114,60 @@ class FREDDataCollector:
         return econ_path, stress_path
 
 
-# ----------------- Stand-alone run -----------------
-if __name__ == "__main__":
-    import os
-    from dotenv import load_dotenv
+# ----------------- Streaming helpers -----------------
 
-    load_dotenv()
-    api_key = os.getenv("FRED_API_KEY")
+def write_json(df, prefix="fred"):
+    """Write rows of dataframe as individual JSON files for Spark streaming."""
+    for _, row in df.iterrows():
+        ts = row.get("date", datetime.utcnow().isoformat())
+        filename = f"{prefix}_{ts.replace(':', '-')}.json"
+        out_path = OUTPUT_DIR / filename
+
+        with open(out_path, "w") as f:
+            json.dump(row.to_dict(), f, default=str)
+
+        logger.info("Streaming FRED JSON → Spark")
+
+
+def stream_fred(api_key, start_date="2020-01-01", sleep_seconds=60):
     if not api_key:
-        raise ValueError("❌ FRED_API_KEY missing in .env")
+        raise ValueError("❌ Missing FRED_API_KEY in environment variables.")
 
+    logger.info("🔌 FRED streaming server starting (file-drop mode)...")
     collector = FREDDataCollector(api_key)
-    econ = collector.collect_all("2020-01-01")
-    stress = collector.compute_stress_index(econ)
-    collector.save_outputs(econ, stress)
-    print("\n✅ FRED economic layer collection complete !")
+
+    while True:
+        logger.info("📡 Collecting macroeconomic indicators from FRED...")
+        df_econ = collector.collect_all(start_date)
+        df_stress = collector.compute_stress_index(df_econ)
+        write_json(df_econ, prefix="fred_econ")
+        write_json(df_stress, prefix="fred_stress")
+        logger.info(f"⏳ Waiting {sleep_seconds} seconds before next FRED update...")
+        time.sleep(sleep_seconds)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="FRED collector/streaming (file-drop).")
+    parser.add_argument("--mode", choices=["stream", "collect"], default="stream", help="stream JSON to file-drop or collect full datasets to disk")
+    parser.add_argument("--api-key", default=os.getenv("FRED_API_KEY", ""), help="FRED API key (falls back to env FRED_API_KEY)")
+    parser.add_argument("--start-date", default="2020-01-01", help="Start date for fetching series")
+    parser.add_argument("--sleep-seconds", type=int, default=60, help="Sleep between streaming iterations")
+    parser.add_argument("--output-dir", default="data/economic", help="Output directory for collected CSVs (collect mode)")
+    args = parser.parse_args()
+
+    api_key = args.api_key or os.getenv("FRED_API_KEY")
+
+    if args.mode == "collect":
+        collector = FREDDataCollector(api_key, output_dir=args.output_dir)
+        econ = collector.collect_all(args.start_date)
+        stress = collector.compute_stress_index(econ)
+        econ_path, stress_path = collector.save_outputs(econ, stress)
+        print("\n✅ FRED economic layer collection complete!")
+        print(f"    Economic data: {econ_path}")
+        print(f"    Stress index: {stress_path}")
+    else:
+        stream_fred(api_key, start_date=args.start_date, sleep_seconds=args.sleep_seconds)
+
+
+if __name__ == "__main__":
+    main()
