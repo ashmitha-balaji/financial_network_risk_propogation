@@ -7,26 +7,10 @@ Financial systems are densely interconnected via lending, ownership and market e
 
 **System design and implemented methodology**
 
-High-level architecture
+<img width="1104" height="599" alt="image" src="https://github.com/user-attachments/assets/085696f6-4c68-4af3-a96d-24cb3e42135e" />
 
-The system pipeline is:
-External Data Sources (FDIC, EDGAR, Yahoo Finance, FRED) 
-    ↓
-Ingestion layer (Python scripts) → Kafka topics (market_data, interbank, ownership, filings)
-    ↓
-Stream processing (Flink jobs reading Kafka and S3) → lightweight cleaning, enrichment, streaming sketches
-    ↓
-S3 (raw + cleaned storage) + Flink-to-AuraDB connector
-    ↓
-Graph store (Neo4j AuraDB): nodes (bank, stock, investor), edges (lends, owns, correlates)
-    ↓
-Analytics: Spark GraphX / Neo4j procedures / NetworkX for offline analyses
-    ↓
-Feature extraction (pagerank, degrees, clustering, time-series indicators)
-    ↓
-ML models (Random Forest / XGBoost) → cascade probability
-    ↓
-Storage (history on S3), alerts, dashboard (Streamlit / custom frontend)
+
+
 
 
 ****The Data Collection in 4 Parts:****
@@ -56,6 +40,9 @@ Interbank lending (bank → bank)
 Market correlations (stock → stock)
 Ownership (institution → stock)
 
+<img width="1080" height="500" alt="image" src="https://github.com/user-attachments/assets/1c677a0d-986e-4ddc-8a29-45de74b3eea2" />
+
+
 **Stream processing and connectors (Flink + S3 → AuraDB)**
 We used Apache Flink to implement continuous jobs that:
 monitor S3 FileSource (Flink’s FileSource.monitorContinuously) for bulk updates,
@@ -63,6 +50,10 @@ apply cleaning, imputation (when fields missing), and enrichment (e.g., map tick
 compute streaming sketches (Count-Min, Bloom filter for deduplication, DGIM windows for event counts, Flajolet–Martin for distinct counts) on the fly for metrics and alerts,
 push upserts to Neo4j AuraDB via an idempotent Flink-to-AuraDB connector using MERGE and unique constraints on node ids.
 Flink enables low-latency continuous updates and scaling if needed; the connector uses batched transactional writes and retries for robustness.
+
+<img width="1280" height="615" alt="image" src="https://github.com/user-attachments/assets/bd59fcc8-fdd9-4827-a2e2-4e2b26b781d4" />
+
+<img width="1280" height="436" alt="image" src="https://github.com/user-attachments/assets/93c55f6a-d6a1-4db6-82b3-0fe36b18a4b2" />
 
 
 
@@ -81,6 +72,8 @@ Indexes and constraints:
 Unique constraints on node ids (for idempotent MERGE)
 Indexes on frequently queried properties (sector, region)
 Cycle detection, multi-hop traversals and contagion path extraction use Neo4j procedures and Cypher queries. For large batch graph analytics (global PageRank or Louvain community detection at scale), we use Spark GraphX on exported snapshots.
+
+<img width="2048" height="978" alt="image" src="https://github.com/user-attachments/assets/72baef84-e7a9-4abd-af79-57730cc394fd" />
 
 
 **Streaming algorithms implemented and rationale**
