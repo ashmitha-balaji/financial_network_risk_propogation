@@ -5,8 +5,8 @@ Bigdata Project
 
 Financial systems are densely interconnected via lending, ownership and market exposures; localized shocks can therefore propagate and produce systemic failures. This project builds a reproducible, open-source, multi-layer big-data pipeline that ingests market, banking and ownership data as streams, constructs and maintains a multiplex graph representation in Neo4j AuraDB, computes streaming graph and sketch-based summaries (incremental PageRank, connected components, DGIM, Bloom filters, Flajolet–Martin, reservoir sampling, LSH), and uses graph-derived features to train machine-learning cascade-prediction models (Random Forest; XGBoost evaluated). The system runs with lightweight containers and cloud object storage (S3) coordinated by Flink streaming jobs that push updates to Neo4j, enabling near-real-time contagion simulation and dashboarding. We evaluate the system by backtesting on historical crisis windows and by measuring prediction accuracy, latency and scalability; the Random Forest cascade predictor trained on the extracted graph features meets the project hypothesis in internal tests (F1 = 1.00 on held-out test partition for the available dataset). The project includes privacy-aware reporting: internal detailed results and shareable anonymized outputs (K-Anonymity applied). The implementation is designed to be reproducible on modest hardware and is structured for further research and competition submissions.
 
-**System design and implemented methodology
-**
+**System design and implemented methodology**
+
 High-level architecture
 
 The system pipeline is:
@@ -101,6 +101,7 @@ pagerank_score (incremental PageRank to reflect recent topology changes)
 in_degree, out_degree, total_degree
 clustering_coefficient (local transitivity)
 betweenness_estimate (approximated via sampling)
+
 Streaming-derived features:
 recent_event_rate (DGIM estimate)
 distinct_counter (Flajolet–Martin)
@@ -119,7 +120,7 @@ Feature extraction produced 4,615 samples with 13 features; label distribution s
 
 
 
-**Key results **
+**Key results**
 Feature extraction: 4,615 nodes, 5,000 edges loaded (project run). PageRank and degrees computed across graph (internal logs).
 Model training: Random Forest achieved F1 = 1.00 on held-out test in the project run (saved model, results JSON present). These results meet the nominal hypothesis but require caution (see Section 7 Limitations). (Project-run artifacts saved in spark_graphs/output/models.)
 Streaming algorithms: empirical error of Count-Min and Flajolet-Martin matched theoretical expectations (error ↓ with larger width/depth), DGIM produced bounded sliding window counts with low memory use; Bloom filters successfully deduplicated high-throughput events with acceptable false-positive rates.
