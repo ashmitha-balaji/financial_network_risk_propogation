@@ -110,6 +110,7 @@ Training procedure: 70% train / 30% test split; walk-forward validation for time
 Internal model run (project logs):
 Feature extraction produced 4,615 samples with 13 features; label distribution showed 131 cascade positive examples and 4,484 negatives. A Random Forest classifier trained on five selected features reported perfect test metrics on the held-out split (F1 = 1.00; ROC-AUC = 1.00) and model artifacts were saved as spark_graphs/output/models/cascade_predictor_20251119_000830.joblib. (These are project results from our runs; see Section 6.2 for discussion on overfitting and limitations.)
 
+<img width="1600" height="905" alt="image" src="https://github.com/user-attachments/assets/aa000c53-760f-4dbf-aba8-fdf670a8ac29" />
 
 
 
@@ -119,4 +120,5 @@ Model training: Random Forest achieved F1 = 1.00 on held-out test in the project
 Streaming algorithms: empirical error of Count-Min and Flajolet-Martin matched theoretical expectations (error ↓ with larger width/depth), DGIM produced bounded sliding window counts with low memory use; Bloom filters successfully deduplicated high-throughput events with acceptable false-positive rates.
 Multi-layer vs single-layer: Multi-layer features improved recall in backtests, particularly for events triggered via cross-layer bridges (ownership→market→bank cascades). (Quantitative improvement: average relative F1 increase ~15–35% across crisis windows in our experiments; exact tables in Appendix.)
 
+<img width="1600" height="968" alt="image" src="https://github.com/user-attachments/assets/35ce478f-f511-4ffd-a3c4-535f17f611e8" />
 
