@@ -1,8 +1,6 @@
 # financial_network_risk_propogation
 Bigdata Project 
 
-**Abstract**
-
 Financial systems are densely interconnected via lending, ownership and market exposures; localized shocks can therefore propagate and produce systemic failures. This project builds a reproducible, open-source, multi-layer big-data pipeline that ingests market, banking and ownership data as streams, constructs and maintains a multiplex graph representation in Neo4j AuraDB, computes streaming graph and sketch-based summaries (incremental PageRank, connected components, DGIM, Bloom filters, Flajolet–Martin, reservoir sampling, LSH), and uses graph-derived features to train machine-learning cascade-prediction models (Random Forest; XGBoost evaluated). The system runs with lightweight containers and cloud object storage (S3) coordinated by Flink streaming jobs that push updates to Neo4j, enabling near-real-time contagion simulation and dashboarding. We evaluate the system by backtesting on historical crisis windows and by measuring prediction accuracy, latency and scalability; the Random Forest cascade predictor trained on the extracted graph features meets the project hypothesis in internal tests (F1 = 1.00 on held-out test partition for the available dataset). The project includes privacy-aware reporting: internal detailed results and shareable anonymized outputs (K-Anonymity applied). The implementation is designed to be reproducible on modest hardware and is structured for further research and competition submissions.
 
 **System design and implemented methodology**
