@@ -77,11 +77,17 @@ Cycle detection, multi-hop traversals and contagion path extraction use Neo4j pr
 **Streaming algorithms implemented and rationale**
 We implemented the following streaming components (brief summary and why used):
 DGIM (Datar-Gionis-Indyk-Motwani) — sliding-window counting for binary event streams (e.g., “is an institution flagged this minute?”). DGIM gives sublinear space with bounded relative error; useful for recent activity counts without storing full windows. (www-cs-students.stanford.edu)
+
 Count-Min Sketch (Cormode & Muthukrishnan) — approximate point counts and heavy-hitters (e.g., which tickers see anomalous trade volumes). CM sketch is simple, fast, and space-efficient; we use it for frequency features and for candidate heavy-hitters to be verified exactly when needed. (dsf.berkeley.edu)
+
 Flajolet–Martin / HyperLogLog family — distinct counter for cardinalities (e.g., distinct counterparties interacting in a window). Used to detect sudden increases in outreach/connectedness. (algo.inria.fr)
+
 Bloom Filter — de-duplication and fast membership checks for streaming deduplication.
+
 Reservoir Sampling — maintaining unbiased samples for downstream diagnostic analyses.
+
 Locality Sensitive Hashing (LSH) — approximate nearest neighbors / entity similarity (e.g., behavioral similarity across time-series or balance-sheet profiles).
+
 Each algorithm is wrapped into Flink operator functions so sketches are maintained per key (per entity or sector) with state backed by Flink state store for recovery.
 
 **Graph analytics & feature engineering**
